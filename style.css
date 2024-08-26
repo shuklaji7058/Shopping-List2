@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --primary-color: #2d8cf0;
+  --secondary-color: #2980b9;
+  --background-color: #1a1a1a;
+  --text-color: #dedede;
+  --item-bg-color: #323232;
+  --item-alt-bg-color: #222;
+  --main-color: #dedede;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: var(--item-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header img {
+  width: 50px;
+  margin-right: 15px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+.heading-effect {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e1e1e1;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.heading-effect:focus,
+.heading-effect:hover {
+  color: #fff;
+}
+
+.heading-effect:focus:after,
+.heading-effect:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.heading-effect:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-input,
+.form-input-filter {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: var(--item-bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-input-filter:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(45, 140, 240, 0.25);
+}
+
+.button {
+  --main-focus: #2d8cf0;
+  --font-color: #dedede;
+  --bg-color-sub: #222;
+  --bg-color: #323232;
+  --main-color: #dedede;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(25px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  stroke: var(--main-color);
+}
+
+.button:hover {
+  background: var(--bg-color);
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+
+.btn-clear {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: 2px solid #c0392b;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px #c0392b;
+  margin-top: 20px;
+}
+
+.btn-clear:hover {
+  background-color: #c0392b;
+}
+
+.btn-clear:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px #c0392b;
+}
+
+.filter-container {
+  margin-top: 20px;
+}
+
+.items {
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.items li {
+  background-color: var(--item-bg-color);
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.items li:nth-child(even) {
+  background-color: var(--item-alt-bg-color);
+}
+
+.items li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.remove-item {
+  color: #e74c3c;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.remove-item:hover {
+  color: #c0392b;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+}

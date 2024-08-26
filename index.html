@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Shopping List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="images/note.png" alt="Shopping List Icon" />
+        <h1 class="heading-effect">Shopping List</h1>
+      </header>
+
+      <form id="item-form">
+        <div class="form-control">
+          <input
+            type="text"
+            class="form-input"
+            id="item-input"
+            name="item"
+            placeholder="Enter item..."
+          />
+        </div>
+        <div class="form-control">
+          <button type="submit" class="button">
+            <span class="button__text">Add Item</span>
+            <span class="button__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke="currentColor"
+                height="24"
+                fill="none"
+                class="svg"
+              >
+                <line y2="19" y1="5" x2="12" x1="12"></line>
+                <line y2="12" y1="12" x2="19" x1="5"></line>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </form>
+
+      <div class="filter-container">
+        <input
+          type="text"
+          class="form-input-filter"
+          id="filter"
+          placeholder="Filter items..."
+        />
+      </div>
+
+      <ul id="item-list" class="items"></ul>
+
+      <button id="clear" class="btn-clear">Clear All</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
