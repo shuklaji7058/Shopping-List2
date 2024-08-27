@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professional Shopping List</title>
+    <title>Shopping List</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -14,9 +17,8 @@
     <div class="container">
       <header>
         <img src="images/note.png" alt="Shopping List Icon" />
-        <h1 class="heading-effect">Shopping List</h1>
+        <h1 id="shopping-list" class="heading-effect">Shopping List</h1>
       </header>
-
       <form id="item-form">
         <div class="form-control">
           <input
@@ -24,7 +26,7 @@
             class="form-input"
             id="item-input"
             name="item"
-            placeholder="Enter item..."
+            placeholder="Enter Item"
           />
         </div>
         <div class="form-control">
@@ -56,11 +58,13 @@
           type="text"
           class="form-input-filter"
           id="filter"
-          placeholder="Filter items..."
+          placeholder="Filter Items"
         />
       </div>
 
-      <ul id="item-list" class="items"></ul>
+      <ul id="item-list" class="items">
+        <!-- List items will be added here dynamically -->
+      </ul>
 
       <button id="clear" class="btn-clear">Clear All</button>
     </div>
